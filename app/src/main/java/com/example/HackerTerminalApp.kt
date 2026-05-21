@@ -117,18 +117,17 @@ fun HackerTerminalApp(viewModel: TerminalViewModel) {
                         )
                     }
 
-                    // Authentic Radial 6dp dot-matrix overlay texture
-                    val dotSpacing = 6.dp.toPx()
-                    val cols = (size.width / dotSpacing).toInt()
-                    val rows = (size.height / dotSpacing).toInt()
-                    for (col in 0..cols) {
-                        for (row in 0..rows) {
-                            drawCircle(
-                                color = Color(0x1300FF41),
-                                radius = 1.0f,
-                                center = Offset(col * dotSpacing, row * dotSpacing)
-                            )
-                        }
+                    // Elegant high-performance tech grid lines (incredibly fast to draw compared to thousands of circles)
+                    val gridSpacing = 24.dp.toPx()
+                    val gridCols = (size.width / gridSpacing).toInt()
+                    for (c in 0..gridCols) {
+                        val x = c * gridSpacing
+                        drawLine(
+                            color = Color(0x0600FF41), // Subtle vertical grid lines
+                            start = Offset(x, 0f),
+                            end = Offset(x, size.height),
+                            strokeWidth = 1f
+                        )
                     }
                 }
             }
