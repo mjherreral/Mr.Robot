@@ -1,0 +1,6 @@
+{
+  "name": "Fsociety Terminal",
+  "description": "Skin inmersiva y realista de Mr. Robot que transforma tu dispositivo en una interfaz hacker interconectada con comandos, radar de red y ciber-monitores.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
